@@ -49,6 +49,7 @@
     "node": "6.* || 8.* || >= 10.*"
   },
   "dependencies": {
+    "ember-cli-mirage": "^0.4.15",
     "ember-concurrency": "^0.8.27"
   }
 }
