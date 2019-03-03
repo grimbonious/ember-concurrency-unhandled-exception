@@ -1,21 +1,22 @@
 /* eslint-env node */
 'use strict';
 
-module.exports = function(app) {
+module.exports = function (app) {
   const express = require('express');
   let booksRouter = express.Router();
 
-  booksRouter.get('/', function(req, res) {
+  booksRouter.get('/', function (req, res) {
     res.send({
       'books': []
     });
   });
 
-  booksRouter.post('/', function(req, res) {
-    res.status(201).end();
+  booksRouter.post('/', function (req, res) {
+    res.status(422).send({
+    });
   });
 
-  booksRouter.get('/:id', function(req, res) {
+  booksRouter.get('/:id', function (req, res) {
     res.send({
       'books': {
         id: req.params.id
@@ -23,7 +24,7 @@ module.exports = function(app) {
     });
   });
 
-  booksRouter.put('/:id', function(req, res) {
+  booksRouter.put('/:id', function (req, res) {
     res.send({
       'books': {
         id: req.params.id
@@ -31,7 +32,7 @@ module.exports = function(app) {
     });
   });
 
-  booksRouter.delete('/:id', function(req, res) {
+  booksRouter.delete('/:id', function (req, res) {
     res.status(204).end();
   });
 
