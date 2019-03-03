@@ -15,16 +15,24 @@ export default Controller.extend(Evented, {
     console.log(`Task createBooksTask: AJAX failed because of '${error.message}'`);
   }),
 
-
-  // BEGIN-SNIPPET create-books-action
   actions: {
-    async createBooks() {
+    // BEGIN-SNIPPET create-books-action
+    createBooks() {
+      try {
+        this.createBooksTask.perform()
+      } catch (e) {
+        console.log(`I never run!`)
+      }
+    },
+    // END-SNIPPET
+    // BEGIN-SNIPPET create-books-action-async
+    async createBooksBlocking() {
       try {
         await this.createBooksTask.perform()
       } catch (e) {
         console.log(`Caught it! ${e}`)
       }
     },
+    // END-SNIPPET
   }
-  // END-SNIPPET
 });

@@ -12,6 +12,11 @@ Within an `ember-concurrency` task, if I make a POST request using `ember-ajax` 
 | `ember-concurrency` | `0.8.27` |
 | `ember-ajax` | `3.1.3` |
 
+## Solution
+
+Make the action an asynchronous function and `await` on the `TaskInstance` returned from `perform()`. This is
+possible as `TaskInstance` has a promise like interface. Thanks to the `await`, the code within the try block will not complete until the task has, stopping the `createBooks` action from leaving the try block prematurely and enabling us to catch any exceptions thrown within the task.
+
 ## References
 
 - [RSVP.js Error Handling](https://github.com/tildeio/rsvp.js#error-handling)
