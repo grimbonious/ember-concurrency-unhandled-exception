@@ -18,7 +18,6 @@ export default Controller.extend(Evented, {
 
   // BEGIN-SNIPPET create-books-action
   actions: {
-    createBooks() {
     async createBooks() {
       try {
         await this.createBooksTask.perform()
