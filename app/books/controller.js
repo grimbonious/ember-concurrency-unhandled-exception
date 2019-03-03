@@ -11,7 +11,11 @@ export default Controller.extend({
 
   actions: {
     createBooks() {
-      this.createBooksTask.perform()
+      try {
+        this.createBooksTask.perform()
+      } catch (error) {
+        console.log(`I caught ec task error: ${error}`)
+      }
     }
   }
 });
