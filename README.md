@@ -8,8 +8,8 @@ Within an `ember-concurrency` task, if I make a POST request using `ember-ajax` 
 
 ## References
 
-[RSVP.js Error Handling](https://github.com/tildeio/rsvp.js#error-handling)
-[Ember Concurrency Task Lifecycle Events](http://ember-concurrency.com/docs/task-lifecycle-events)
+- [RSVP.js Error Handling](https://github.com/tildeio/rsvp.js#error-handling)
+- [Ember Concurrency Task Lifecycle Events](http://ember-concurrency.com/docs/task-lifecycle-events)
 
 
 ## Prerequisites
