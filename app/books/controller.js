@@ -9,13 +9,12 @@ export default Controller.extend({
     yield this.ajax.post('/api/books');
   }),
 
+
+  // BEGIN-SNIPPET create-books-action
   actions: {
     createBooks() {
-      try {
-        this.createBooksTask.perform()
-      } catch (error) {
-        console.log(`I caught ec task error: ${error}`)
-      }
-    }
+      this.createBooksTask.perform()
+    },
   }
+  // END-SNIPPET
 });
