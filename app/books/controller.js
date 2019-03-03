@@ -19,7 +19,12 @@ export default Controller.extend(Evented, {
   // BEGIN-SNIPPET create-books-action
   actions: {
     createBooks() {
-      this.createBooksTask.perform()
+    async createBooks() {
+      try {
+        await this.createBooksTask.perform()
+      } catch (e) {
+        console.log(`Caught it! ${e}`)
+      }
     },
   }
   // END-SNIPPET
