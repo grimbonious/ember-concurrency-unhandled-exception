@@ -6,6 +6,12 @@ How does one stop an unhandled exception from occuring when `ember-ajax` receive
 
 Within an `ember-concurrency` task, if I make a POST request using `ember-ajax` and said request throws an `InvalidError` upon receiving a `422` status code from the server, how can I stop the exception from bubbling to the RSVP.onerrorDefault handler, as a `422` response is expected in some circumstances.
 
+| Dependency | Version |
+| --- | --- |
+| `ember` | `3.5.1` |
+| `ember-concurrency` | `0.8.27` |
+| `ember-ajax` | `3.1.3` |
+
 ## References
 
 - [RSVP.js Error Handling](https://github.com/tildeio/rsvp.js#error-handling)
