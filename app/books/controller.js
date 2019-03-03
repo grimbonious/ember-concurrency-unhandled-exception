@@ -6,7 +6,7 @@ export default Controller.extend({
   ajax: service(),
 
   createBooksTask: task(function* () {
-    yield this.ajax.post('/books');
+    yield this.ajax.post('/api/books');
   }),
 
   actions: {
